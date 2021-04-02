@@ -1,0 +1,32 @@
+2021-04-01 09:50:40,866 INFO supervisord started with pid 1
+2021-04-01 09:50:41,868 INFO spawned: 'laravel-worker_00' with pid 10
+2021-04-01 09:50:42,055 INFO exited: laravel-worker_00 (exit status 1; not expected)
+2021-04-01 09:50:43,057 INFO spawned: 'laravel-worker_00' with pid 17
+2021-04-01 09:50:43,223 INFO exited: laravel-worker_00 (exit status 1; not expected)
+2021-04-01 09:50:45,227 INFO spawned: 'laravel-worker_00' with pid 24
+2021-04-01 09:50:45,382 INFO exited: laravel-worker_00 (exit status 1; not expected)
+2021-04-01 09:50:48,386 INFO spawned: 'laravel-worker_00' with pid 31
+2021-04-01 09:50:48,551 INFO exited: laravel-worker_00 (exit status 1; not expected)
+2021-04-01 09:50:49,552 INFO gave up: laravel-worker_00 entered FATAL state, too many start retries too quickly
+2021-04-01 10:19:27,209 WARN received SIGQUIT indicating exit request
+2021-04-01 10:24:43,341 INFO supervisord started with pid 1
+2021-04-01 10:24:44,343 INFO spawned: 'laravel-worker_00' with pid 9
+2021-04-01 10:24:44,488 INFO exited: laravel-worker_00 (exit status 1; not expected)
+2021-04-01 10:24:45,489 INFO spawned: 'laravel-worker_00' with pid 16
+2021-04-01 10:24:45,625 INFO exited: laravel-worker_00 (exit status 1; not expected)
+2021-04-01 10:24:47,629 INFO spawned: 'laravel-worker_00' with pid 23
+2021-04-01 10:24:47,761 INFO exited: laravel-worker_00 (exit status 1; not expected)
+2021-04-01 10:24:50,766 INFO spawned: 'laravel-worker_00' with pid 30
+2021-04-01 10:24:50,924 INFO exited: laravel-worker_00 (exit status 1; not expected)
+2021-04-01 10:24:51,926 INFO gave up: laravel-worker_00 entered FATAL state, too many start retries too quickly
+2021-04-01 16:24:24,371 WARN received SIGQUIT indicating exit request
+2021-04-02 06:06:01,206 INFO supervisord started with pid 1
+2021-04-02 06:06:02,208 INFO spawned: 'laravel-worker_00' with pid 11
+2021-04-02 06:06:02,349 INFO exited: laravel-worker_00 (exit status 1; not expected)
+2021-04-02 06:06:03,352 INFO spawned: 'laravel-worker_00' with pid 18
+2021-04-02 06:06:03,476 INFO exited: laravel-worker_00 (exit status 1; not expected)
+2021-04-02 06:06:05,479 INFO spawned: 'laravel-worker_00' with pid 25
+2021-04-02 06:06:05,609 INFO exited: laravel-worker_00 (exit status 1; not expected)
+2021-04-02 06:06:08,613 INFO spawned: 'laravel-worker_00' with pid 32
+2021-04-02 06:06:08,738 INFO exited: laravel-worker_00 (exit status 1; not expected)
+2021-04-02 06:06:09,739 INFO gave up: laravel-worker_00 entered FATAL state, too many start retries too quickly
