@@ -18,7 +18,7 @@ services:
     ports:
       - ${BACKEND_EXTERNAL_PORT}:80
     volumes:
-      - ./backend-app:/var/www/html
+      - ./backend-app:${PROJECT_PATH}
       - ./docker/nginx/default.conf:/etc/nginx/conf.d/default.conf
     depends_on:
       - php
@@ -32,7 +32,7 @@ services:
     ports:
       - ${FRONTEND_EXTERNAL_PORT}:80
     volumes:
-      - ./frontend-app:/var/www/html
+      - ./frontend-app:${PROJECT_PATH}
       - ./docker/nginx-frontend/default.conf:/etc/nginx/conf.d/default.conf
 
   mysql:
@@ -62,7 +62,7 @@ services:
       dockerfile: Dockerfile
     container_name: ${APP_NAME}__php
     volumes:
-      - ./backend-app:/var/www/html
+      - ./backend-app:${PROJECT_PATH}
       - ./docker/php/php.local.ini:/usr/local/etc/php/conf.d/php.local.ini
     environment: *laravelEnvironment
     extra_hosts:
@@ -77,7 +77,7 @@ services:
       dockerfile: Dockerfile
     container_name: ${APP_NAME}__php-horizon
     volumes:
-      - ./backend-app:/var/www/html
+      - ./backend-app:${PROJECT_PATH}
       - ./docker/php-horizon/supervisord.conf:/etc/supervisord.conf
     entrypoint: ['/usr/bin/supervisord', '-n', '-c',  '/etc/supervisord.conf']
     environment: *laravelEnvironment
@@ -101,16 +101,16 @@ services:
       dockerfile: Dockerfile
     container_name: ${APP_NAME}__composer
     volumes:
-      - ./backend-app:/var/www/html
-    working_dir: /var/www/html
+      - ./backend-app:${PROJECT_PATH}
+    working_dir: ${PROJECT_PATH}
     entrypoint: ['composer']
 
   yarn:
     image: node
     container_name: ${APP_NAME}__yarn
     volumes:
-      - ./frontend-app:/var/www/html
-    working_dir: /var/www/html
+      - ./frontend-app:${PROJECT_PATH}
+    working_dir: ${PROJECT_PATH}
     entrypoint: ['yarn']
     ports:
     - "8080:8080"
@@ -124,11 +124,11 @@ services:
       dockerfile: Dockerfile
     container_name: ${APP_NAME}__artisan
     volumes:
-      - ./backend-app:/var/www/html
+      - ./backend-app:${PROJECT_PATH}
     depends_on:
       - mysql
-    working_dir: /var/www/html
-    entrypoint: ['php', '/var/www/html/artisan']
+    working_dir: ${PROJECT_PATH}
+    entrypoint: ['php', '${PROJECT_PATH}/artisan']
     environment: *laravelEnvironment
 
   phpmyadmin:
